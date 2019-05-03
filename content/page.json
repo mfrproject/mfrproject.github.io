@@ -4,10 +4,11 @@
         "last_page": 1
     },
     {
-        "title": "Lorem Ipsum",
-        "preview_content": "Lorem Ipsum&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's stan",
-        "url": "lorem-ipsum.html",
+        "title": "Plugin Struk Bukti Peminajaman Slims",
+        "preview_content": "Plugin Struk Bukti Peminajaman SLiMSPemijaman buku pada umumnya tidak melampirkan bukti peminjaman, tetapi beberapa instansi menerapkan aturan tersendiri dalam peminjaman buku yaitu struk bukti peminjaman buku seperti yang diterapkan di&nbsp;Dinas Ke...",
+        "url": "plugin-struk-bukti-pemina.html",
         "post_date": "May, 03 2019",
-        "post_by": "Mas Drajat"
+        "post_by": "Mas Drajat",
+        "banner": "https:\/\/mfrproject.github.io\/content\/img\/plugin-struk-peminjaman.jpg"
     }
 ]
