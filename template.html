@@ -30,27 +30,6 @@
   <meta property="twitter:image" content="https://mfrproject.github.io/{banner}"/>
   <!-- Robot -->
   <meta name="robots" content="index, follow">
-  <!-- Expr -->
-  <link expr:href='data:blog.homepageUrl' rel='openid.delegate'/>
-  <link expr:href='data:blog.url' rel='canonical'/>
-  <link expr:href='data:blog.url' hreflang='x-default' rel='alternate'/>
-  <meta content='article' property='og:type'/>
-  <b:if cond='data:blog.pageType == &quot;item&quot;'>
-  <meta expr:content='data:blog.pageName' property='og:title'/>
-  <meta expr:content='data:blog.canonicalUrl' property='og:url'/>
-  <meta content='website' property='og:type'/>
-  </b:if>
-  <meta expr:content='data:blog.title' property='og:site_name'/>
-  <b:if cond='data:blog.postImageThumbnailUrl'>
-  <meta expr:content='data:blog.postImageThumbnailUrl' property='og:image'/>
-  <b:else/>
-  <meta content='https://mfrproject.github.io/{banner}' property='og:image'/>
-  </b:if>
-  <b:if cond='data:blog.metaDescription'>
-  <meta expr:content='data:blog.metaDescription' property='og:description'/>
-  <b:else/>
-  <meta expr:content='data:post.snippet' property='og:description'/>
-  </b:if>
   <link href="https://mfrproject.github.io" rel="canonical">
   <!-- Bootstrap core CSS -->
   <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
