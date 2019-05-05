@@ -3,11 +3,11 @@
         "status": true,
         "limit_page": 10,
         "category": {
-            "Pluggin": 1,
+            "Pluggin": 2,
             "Module": 0,
             "Template": 1
         },
-        "last_page": 2
+        "last_page": 3
     },
     {
         "title": "Plugin Struk Bukti Peminjaman Slims",
@@ -27,6 +27,16 @@
         "post_by": "Mas Drajat",
         "banner": "content\/img\/preview.png",
         "category": "Template",
+        "public_hide": false
+    },
+    {
+        "title": "Surat Bebas Pustaka - Slims",
+        "preview_content": "<p style=\"text-align: justify;\">Pemustaka pada suatu instansi pendidikan pada umumnya&nbsp;memiliki masa keanggotaan yang akan berakhir pada saat pemustaka tersebut telah dinyatakan lulus dari instansi tersebut. Kelulusan tersebut akan memiliki banyak syarat yang harus dipenuhi, sa...<\/p>",
+        "url": "surat-bebas-pustaka---sli.html",
+        "post_date": "May, 06 2019",
+        "post_by": "Mas Drajat",
+        "banner": "content\/img\/fll.png",
+        "category": "Pluggin",
         "public_hide": false
     }
 ]
