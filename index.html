@@ -1,15 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Title -->
+  <title>MfrProject :: GoSLiMS Mirror</title>
+  <!-- Meta -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, post-check=0, pre-check=0" />
+  <meta http-equiv="Expires" content="Sat, 26 Jul 1997 05:00:00 GMT" />
   <meta name="description" content="GoSLiMS Mirror : from community to community, no ads, and just for humanity">
   <meta name="author" content="Drajat Hasan">
-  <title>MfrProject :: GoSLiMS Mirror</title>
+  <meta name="generator" content="Mfr Project">
+  <meta name="theme-color" content="#000">
+  <!-- Opengraph -->
+  <meta property="og:locale" content="id_ID"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:description" content="GoSLiMS Mirror : from community to community, no ads, and just for humanity"/>
+  <meta property="og:title" content="MfrProject :: GoSLiMS Mirror"/>
+  <meta property="og:url" content="//mfrproject.github.io"/>
+  <meta property="og:site_name" content="Mfr Project"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="//mfrproject.github.io/content/img/logo.png"/>
+  <!-- Twitter
+  ============================================= -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="//mfrproject.github.io"/>
+  <meta name="twitter:title" content="Mfr Project"/>
+  <meta property="twitter:image" content="//mfrproject.github.io/content/img/logo.png"/>
+  <!-- Robot -->
+  <meta name="robots" content="index, follow">
+  <!-- Expr -->
+  <link expr:href='data:blog.homepageUrl' rel='openid.delegate'/>
+  <link expr:href='data:blog.url' rel='canonical'/>
+  <link expr:href='data:blog.url' hreflang='x-default' rel='alternate'/>
+  <meta content='article' property='og:type'/>
+  <b:if cond='data:blog.pageType == &quot;item&quot;'>
+  <meta expr:content='data:blog.pageName' property='og:title'/>
+  <meta expr:content='data:blog.canonicalUrl' property='og:url'/>
+  <meta content='website' property='og:type'/>
+  </b:if>
+  <meta expr:content='data:blog.title' property='og:site_name'/>
+  <b:if cond='data:blog.postImageThumbnailUrl'>
+  <meta expr:content='data:blog.postImageThumbnailUrl' property='og:image'/>
+  <b:else/>
+  <meta content='//mfrproject.github.io/content/img/logo.png' property='og:image'/>
+  </b:if>
+  <b:if cond='data:blog.metaDescription'>
+  <meta expr:content='data:blog.metaDescription' property='og:description'/>
+  <b:else/>
+  <meta expr:content='data:post.snippet' property='og:description'/>
+  </b:if>
+  <link href="https://mfrproject.github.io" rel="canonical">
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom styles for this template -->
   <link href="css/blog-home.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
   <!-- Navigation -->
@@ -64,17 +113,17 @@
                 <div class="col-lg-6">
                   <ul class="list-unstyled mb-0">
                     <li>
-                      <a href="#">Plugin</a>
+                      <a href="#" class="Plugin">Plugin(0)</a>
                     </li>
                     <li>
-                      <a href="#">Tema/Template</a>
+                      <a href="#" class="Template">Tema/Template</a>
                     </li>
                     <li>
-                      <a href="#">Modules</a>
+                      <a href="#" class="Modules">Modules</a>
                     </li>
                   </ul>
                 </div>
-                <div class="col-lg-6">
+                <!-- <div class="col-lg-6">
                   <ul class="list-unstyled mb-0">
                     <li>
                       <a href="#">JavaScript</a>
@@ -86,14 +135,14 @@
                       <a href="#">Tutorials</a>
                     </li>
                   </ul>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
           <!-- Side Widget -->
           <div class="card my-4">
             <h5 class="card-header">Jumlah Koleksi</h5>
-            <div class="card-body">
+            <div class="card-body debug">
               belum terhitung :).
             </div>
           </div>
@@ -131,33 +180,59 @@
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         var obj = JSON.parse(this.responseText);
+        // obj.reverse();       
         if (obj.length > 0) {
           var i;
-          var lp = obj[0].last_page;
+          var lp = obj[0].limit_page;
+
+          
+          var e = 1
+          var i = 10;
+
           var text = '';
-
-          if (lp >= 10) {
-            var lp = 10;
+          while (i >= e) {
+            if (typeof obj[i] !== "undefined") {
+                if (obj[i].public_hide == false) {
+                    text += '<div class="card mb-4">';
+                    if (obj[i].banner != 'NULL') {
+                       text += '<img class="card-img-top img'+i+'" data-src="'+obj[i].banner+'" alt="Card image cap" style="display: none;"/>';
+                       text += '<div class="thumbnail_click" img-id="'+i+'"><i class="fa fa-image" style="text-align: center;cursor:pointer;display: block;font-size: 100px;color: #bdbdbd;"></i><small style="text-align: center; display: block;">click icon for open thubmnail</small></div>';
+                    }
+                    text += '<div class="card-body">';
+                    text += '<h2 class="card-title">'+obj[i].title+'</h2>';
+                    text += '<p class="card-text">'+obj[i].preview_content+'</p>';
+                    text += '<a href="content/'+obj[i].url+'" class="btn btn-primary">Read More &rarr;</a>';
+                    text += '</div>';
+                    text += '<div class="card-footer text-muted">Posted on '+obj[i].post_date+' by '+obj[i].post_by+' - <i>Category <b>'+obj[i].category+'</b></i></div>';
+                    text += '</div>';
+                }
+            }
+            i--;
           }
-
-          for (i = 1; i <= lp ; i++) {
-              text += '<div class="card mb-4">';
-              text += '<img class="card-img-top" src="'+obj[i].banner+'" alt="Card image cap">';
-              text += '<div class="card-body">';
-              text += '<h2 class="card-title">'+obj[i].title+'</h2>';
-              text += '<p class="card-text">'+obj[i].preview_content+'</p>';
-              text += '<a href="content/'+obj[i].url+'" class="btn btn-primary">Read More &rarr;</a>';
-              text += '</div>';
-              text += '<div class="card-footer text-muted">Posted on '+obj[i].post_date+' by '+obj[i].post_by+'</div>';
-              text += '</div>';
-          }
-          $('#mainContent').prepend(text);
+          // set page
+          $('#mainContent').html(text);
+          // Set counter
+          $('.Plugin').html('Plugin('+obj[0].category.Pluggin+')');
+          $('.Template').html('Template('+obj[0].category.Template+')');
+          $('.Modules').html('Modules('+obj[0].category.Module+')');
         }
       }
     };
     
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
+  </script>
+  <script type="text/javascript">
+    $('#mainContent').on('click', '.thumbnail_click', function(){
+        var obj       = $(this);
+        var img_id    = obj.attr('img-id');
+        var img       = $('.img'+img_id);
+        var img_src   = img.attr('data-src');
+
+        img.attr('src', img_src);
+        img.slideDown();
+        obj.slideUp();
+    });
   </script>
   <style type="text/css">
     .counterimg {

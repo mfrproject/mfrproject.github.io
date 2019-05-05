@@ -1,14 +1,32 @@
 [
     {
         "status": true,
-        "last_page": 1
+        "limit_page": 10,
+        "category": {
+            "Pluggin": 1,
+            "Module": 0,
+            "Template": 1
+        },
+        "last_page": 2
     },
     {
-        "title": "Plugin Struk Bukti Peminajaman Slims",
-        "preview_content": "Plugin Struk Bukti Peminajaman SLiMSPemijaman buku pada umumnya tidak melampirkan bukti peminjaman, tetapi beberapa instansi menerapkan aturan tersendiri dalam peminjaman buku yaitu struk bukti peminjaman buku seperti yang diterapkan di&nbsp;Dinas Ke...",
-        "url": "plugin-struk-bukti-pemina.html",
-        "post_date": "May, 03 2019",
+        "title": "Plugin Struk Bukti Peminjaman Slims",
+        "preview_content": "<p style=\"text-align: justify;\">Peminjaman buku pada umumnya tidak melampirkan bukti peminjaman, tetapi beberapa instansi menerapkan aturan tersendiri dalam peminjaman buku yaitu struk bukti peminjaman buku seperti yang diterapkan di&nbsp;Dinas Kearsipan&nbsp;dan Perpustakaan&nbsp;...<\/p>",
+        "url": "plugin-struk-bukti-peminj.html",
+        "post_date": "May, 05 2019",
         "post_by": "Mas Drajat",
-        "banner": "https:\/\/mfrproject.github.io\/content\/img\/plugin-struk-peminjaman.jpg"
+        "banner": "content\/img\/plugin-struk-peminjaman.jpg",
+        "category": "Pluggin",
+        "public_hide": false
+    },
+    {
+        "title": "Template Slims Adminlte",
+        "preview_content": "<p style=\"text-align: justify;\">Template merupakan komponen utama dari SLiMS. Kegunaan komponen ini berkaitan dengan proses interaksi antara pengguna dan sistem yang ditunjukan dengan adanya aktivitas input dan output data. Intensitas aktivitas tersebut akan terus berulang hari dem...<\/p>",
+        "url": "template-slims-adminlte.html",
+        "post_date": "May, 05 2019",
+        "post_by": "Mas Drajat",
+        "banner": "content\/img\/preview.png",
+        "category": "Template",
+        "public_hide": false
     }
 ]
