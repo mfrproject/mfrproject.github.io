@@ -3,11 +3,11 @@
         "status": true,
         "limit_page": 10,
         "category": {
-            "Pluggin": 2,
+            "Pluggin": 3,
             "Module": 0,
             "Template": 1
         },
-        "last_page": 3
+        "last_page": 4
     },
     {
         "title": "Plugin Struk Bukti Peminjaman Slims",
@@ -36,6 +36,16 @@
         "post_date": "May, 06 2019",
         "post_by": "Mas Drajat",
         "banner": "content\/img\/fll.png",
+        "category": "Pluggin",
+        "public_hide": false
+    },
+    {
+        "title": "Plugin Ekspor Data Statistik Penggunaan Koleksi",
+        "preview_content": "<p style=\"text-align: justify;\">Plugin ini merupakan plugin spesial dibulan ramadhan. Kegunaan dari plugin ini yaitu untuk mengekspor data statistik penggunaan koleksi yang ada di SLiMS. Plugin ini cukup sederhana, cara kerjanya pun mudah untuk dipahami. Prinsip nya plugin ini berk...<\/p>",
+        "url": "plugin-ekspor-data-statis.html",
+        "post_date": "May, 13 2019",
+        "post_by": "Mas Drajat",
+        "banner": "content\/img\/Screenshot_2019-05-13_22-34-49.png",
         "category": "Pluggin",
         "public_hide": false
     }
